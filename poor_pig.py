@@ -25,7 +25,7 @@ O	A	A	A
 60min(4)
 O	A	A	A	A
 0	1	2	3	4					5 total
-                                                                                ( #try + 1 )^1
+                                                                                >>>>> ( #try + 1 )^1
 2 Pig  ->  2 char
 15min(1)			
 OO	AO	OB	AB		
@@ -33,13 +33,13 @@ OO	AO	OB	AB
 30min(2)
 OO	AO	OB	AB	OB	AO	AB	AB	AB		
 00	10	01	11	02	20	12	21	22	9 total	
-                                                                                ( #try + 1 )^2
+                                                                                >>>>> ( #try + 1 )^2
 
 3 Pig  ->  3 char
 15min(1)
 OOO	AOO	OBO	OOC	ABO	AOC	OBC	ABC
 000	100	010	001	110	101	011	111		8 total	
-                                                                                ( #try + 1 )^3
+                                                                                >>>>> ( #try + 1 )^3
 
 Conclusion >>>>>  ( #try + 1 )^#Pig
 """
