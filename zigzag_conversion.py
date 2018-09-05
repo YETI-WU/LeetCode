@@ -20,7 +20,7 @@ A     L  S    I  G
 Y  A     H  R
 P        I
 """
-
+# O(N) Time
 def convert(strng, numRows):
     if numRows==1 or numRows>len(strng):  return strng
     listMatrix = ['']*numRows  # build the form for assigned numRows
