@@ -33,3 +33,6 @@ def threeSum(nums):
                 while l < r and num[r] == num[r-1]:  r -= 1  # skip repeating r
                 l += 1  ;  r -= 1  # looping forward for differe l and r combination with the same i
     return res
+
+  
+  
