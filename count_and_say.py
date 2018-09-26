@@ -34,6 +34,7 @@ Output: "1211"
 From the examples you can see, the (i+1)th sequence is the "count and say" of the ith sequence!
 """
 
+# Dynamic Programming
 def countAndSay(n):
     s = '1'
     for _ in range(n-1):
