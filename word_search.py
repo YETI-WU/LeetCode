@@ -18,6 +18,7 @@ Given word = "ABCB", return false.
 """
 
 # DFS
+# Time O(N^2) for N*N board, or Time O(M*N) for M*N board
 def exist(self, board, word):
     if not board:  return False
     for i in range(len(baord)):                 # scan in row
