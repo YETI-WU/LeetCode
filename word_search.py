@@ -29,8 +29,8 @@ def exist(self, board, word):
     
 def dfs(self, board, i, j, word):
     if len(word) == 0 :  return True            # all characters in word are checked
-    if i<0 or i>len(board) \
-    or j<0 or j>len(board[0]) \
+    if i<0 or i>=len(board) \
+    or j<0 or j>=len(board[0]) \
     or word[0]!=board[i][j] :                   # Edge Cases
         return False
         
