@@ -36,8 +36,11 @@ def dfs(self, board, i, j, word):
         
     visit = board[i][j]                         # save visit character in temp for later reconstruction. (excluded for only 1 run)
     board[i][j] = '#'                           # avoid visit back again
-    res = self.dfs(board, i+1, j, word[1:]) or self.dfs(baord, i-1, j, word[1:]) \
-    or self.dfs(baord, i, j+1, wor[1:]) or self.dfs(board, i, j-1, word[1:])
+    res = \
+    self.dfs(board, i+1 , j   , word[1:]) or \
+    self.dfs(baord, i-1 , j   , word[1:]) or \
+    self.dfs(baord, i   , j+1 , word[1:]) or \
+    self.dfs(board, i   , j-1 , word[1:])
     
     board[i][j] = visit                         # update board back to its original value for next run. (excluded for only 1 run)
     
