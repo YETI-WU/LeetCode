@@ -18,7 +18,7 @@ Given word = "ABCB", return false.
 """
 
 # DFS
-# Time O(N) for board dimension : row * column = N 
+# Time O(V+E), Vertex and Edge
 def exist(self, board, word):
     if not board:  return False
     for i in range(len(baord)):                 # scan in row
