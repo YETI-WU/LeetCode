@@ -22,7 +22,7 @@ Output: 3
 """
 
 # DFS
-# Time O(N) for grid dimension : row * column = N 
+# Time O(V+E), Vertex and Edge
 def numIslands(self, grid):
     if not grid :  return 0
     
