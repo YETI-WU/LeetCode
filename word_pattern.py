@@ -23,3 +23,7 @@ def wordPattern(pattern, str):
     t = str.split()
     return map(s.find, s) == map(t.index, t)    # map(function_to_apply, list_of_inputs)
   
+    
+    
+    
+    
