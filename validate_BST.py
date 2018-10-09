@@ -30,9 +30,12 @@ Explanation: The input is: [5,1,4,null,null,3,6]. The root node's value
 #         self.right = None
 
 class Solution:
-    def isValidBST(self, root):
+    def isValidBST(self, root, less = float('inf'), larger = float('-inf') ):
         """
         :type root: TreeNode
         :rtype: bool
         """
-
+        if not root:
+            return True
+        
+        
