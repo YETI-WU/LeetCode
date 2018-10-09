@@ -37,5 +37,7 @@ class Solution:
         """
         if not root:
             return True
+        if root.val <= larger or root.val >= less:
+            return False
         
         
