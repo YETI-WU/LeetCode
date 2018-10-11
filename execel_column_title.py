@@ -39,14 +39,20 @@ ZZZZ = Z×26³ + Z×26² + Z×26¹ + Z = 26×26³ + 26×26² + 26×26¹ + 26
 use (n-1)%26 instead, range from 0 to 25.
 """
 
-# Recursive
+
 def convertToTitle(n):
     if n == 0:
         return ''
-    else:
-        convertToTitle( (n-1)//26 + chr( (n-1)%26 + ord('A') ) )
+    
+    res = ''
+    while n > 0:
+        res = chr( (n-1)%26 + ord('A') ) + res
+        n = (n-1) // 26
+
+    return res
+
     # ord('A') = 65
 
 
 
-# ........... not finished yet
+
