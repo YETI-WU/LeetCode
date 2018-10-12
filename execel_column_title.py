@@ -42,7 +42,7 @@ use (n-1)%26 instead, range from 0 to 25.
 ord('A') = 65
 """
 
-
+# Time O(1), Space O(1)
 def convertToTitle(n):
     res = ''
     while n > 0:
