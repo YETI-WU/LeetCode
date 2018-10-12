@@ -44,9 +44,6 @@ ord('A') = 65
 
 
 def convertToTitle(n):
-    if n == 0:
-        return ''
-    
     res = ''
     while n > 0:
         res = chr( (n-1)%26 + ord('A') ) + res
