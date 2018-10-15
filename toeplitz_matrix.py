@@ -40,7 +40,7 @@ def isToepllitzMatrix(m):
                 return False
     return True
 
-
+# Time O(m*n), Space O(1)
 
 
 
