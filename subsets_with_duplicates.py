@@ -15,8 +15,13 @@ Output:
 ]
 """
 
+# Iterative,  Time O(N), Space O(1)
 def substedWithDup(nums):
-
+    res = [ [] ]
+    nums.sort()
+    for num in nums:
+        res += [ [num] + item for item in res  if [num]+item not in res]
+    return res
 
 
 
