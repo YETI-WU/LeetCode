@@ -11,3 +11,6 @@ Example 2:
 Given nums = [-2, -1, 2, 1], k = 1,
 return 2. (because the subarray [-1, 2] sums to 1 and is the longest) 
 """
+
+def maxSubArray(num, k):
+    
