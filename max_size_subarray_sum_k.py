@@ -13,4 +13,19 @@ return 2. (because the subarray [-1, 2] sums to 1 and is the longest)
 """
 
 def maxSubArray(num, k):
-    
+    acc = 0
+    dic = {0:-1}   # accumulation : index
+    result = 0
+    for i , num in enuerate(nums):
+        acc += num
+        if acc not in dic:
+            dic[acc] = i
+        if acc-k in dic:
+            result = max(result, i - dic[acc-k])
+    return result
+
+# Time O(N), Space O(N)
+
+
+
+
