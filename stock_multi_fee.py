@@ -25,5 +25,15 @@ Note:
 •  0 <= fee < 50000.
 """
 
+# cash : the max profit if we sell stock at i-th day
+# hold : the max profit if we buy  stock at i-th day
 def maxProfit_Fee(prices, fee):
+    cash = 0
+    hold = -price[0]
+    for i in range(1,len(prices)):
+        cash = max( cash , hold + price[i] - fee )
+        hold = max( hold , cash - price[i] )
+    return cash
+
+# Time O(N), Space O(1)
 
