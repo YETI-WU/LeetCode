@@ -14,5 +14,12 @@ For example, given s = "++++", after one move, it may become one of the followin
 If there is no valid move, return an empty list [].
 """
 
+def generatePossibleNextMoves(s):
+    result = []
+    for i in range(len(s)):
+        if s[i:i+2] == '++':
+            result.append(s[:i] + '--' + s[i+2:])
+    return result
 
+# Time O(n), Space O(1)
 
