@@ -24,3 +24,8 @@ Follow up:
 1.	Try to solve it in O(n log k) time and O(n) extra space.
 """
 
+import collections
+def topKFrequent(words, k):
+    return [ i for i in collections.Counter(words).most_common(k) ]
+
+
