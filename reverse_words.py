@@ -8,3 +8,10 @@ return "blue is sky the".
 Could you do it in-place without allocating extra space?
 """
 
+# Python 1 line code
+def reverseWords(s):
+    return ' '.join(reversed(s.split()))
+
+
+
+
