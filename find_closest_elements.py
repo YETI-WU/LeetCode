@@ -19,3 +19,16 @@ Note:
 3.	Absolute value of elements in the array and x will not exceed 104
 ＂＂＂
 
+# Binary Search
+def findClosestElements(arr, k , x):
+    lo , hi = 0 , len(arr)-k
+    while lo < hi :
+        mid = (lo + hi) // 2
+        if x - arr[mid] > arr[mid+k] - x :
+            lo = mid + 1
+        else:
+            hi = mid
+    return arr[lo:lo+k]
+
+# Time O(logN + k): logN for binary search, k for k element
+# Space O(k) for k elements
