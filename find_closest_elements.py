@@ -1,5 +1,5 @@
 #658. Find K Closest Elements 
-＂＂＂
+"""
 Medium  Given a sorted array, two integers k and x, 
 find the k closest elements to x in the array. 
 The result should also be sorted in ascending order. 
@@ -17,7 +17,7 @@ Note:
 1.	The value k is positive and will always be smaller than the length of the sorted array.
 2.	Length of the given array is positive and will not exceed 104
 3.	Absolute value of elements in the array and x will not exceed 104
-＂＂＂
+"""
 
 # Binary Search
 def findClosestElements(arr, k , x):
@@ -32,3 +32,8 @@ def findClosestElements(arr, k , x):
 
 # Time O(logN + k): logN for binary search, k for k element
 # Space O(k) for k elements
+
+
+
+
+
