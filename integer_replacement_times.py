@@ -19,4 +19,14 @@ Explanation:
 7 -> 6 -> 3 -> 2 -> 1
 """
 
-def integer
+# Recursive: Time O(logN), Space O(1)
+def integerReplacement(n):
+    if n==0: 
+        return 0
+    if n%2:
+        reuturn 1 + min(integerReplacement(n-1), integerReplacement(n+1))
+    else:
+        return 1 + integerReplacement(*n/2)
+    
+    
+# Memoi-zation
