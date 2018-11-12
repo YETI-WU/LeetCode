@@ -39,7 +39,6 @@ def recMemo(n, memo):
     else:
         memo[n] = 1 + recMemo(n/2,memo)
         return memo[n]
-
 def integerReplacmentM(n):
     memo = {1:0}
     return recMemo(n,memo)
