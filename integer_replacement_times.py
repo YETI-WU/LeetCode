@@ -30,3 +30,21 @@ def integerReplacement(n):
     
     
 # Memoi-zation
+def recMemo(n, memo):
+    if n in memo:
+        return memo[n]
+    if n%2:
+        memo[n] = 1 + min(recMemo(n+1,memo), recMemo(n-1,memo))
+        return memo[n]
+    else:
+        memo[n] = 1 + recMemo(n/2,memo)
+        return memo[n]
+
+def integerReplacmentM(n):
+    memo = {1:0}
+    return recMemo(n,memo)
+
+
+
+
+
