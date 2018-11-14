@@ -10,3 +10,10 @@ Note:
 •	You need to reduce multiple spaces between two words to a single space in the reversed string.
 Follow up: For C programmers, try to solve it in-place in O(1) space.
 """
+
+def reverseWordsInString(s):
+    return ' '.join(reversed(s.split()))
+
+
+
+
