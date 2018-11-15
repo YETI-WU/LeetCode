@@ -13,3 +13,11 @@ Input: [4,1,2,1,2]
 Output: 4
 """
 
+def singleNumber(nums):
+    a = 0
+    for i in nums:
+        a ^= i
+    return a
+
+
+# Time O(N), Space O(1)
