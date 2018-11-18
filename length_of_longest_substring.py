@@ -7,4 +7,21 @@ Given "bbbbb", the answer is "b", with the length of 1.
 Given "pwwkew", the answer is "wke", with the length of 3. Note that the answer must be a substring, "pwke" is a subsequence and not a substring.
 """
 
-def lengthOfLongestSubstring(string):
+def lengthOfLongestSubstring(string):`
+    start = 0
+    seen = {}
+    maxLen = 0
+    for i,letter in enumerate(string):
+        if letter in seen:
+            start = seen[letter]+1
+        else:
+            maxLen = max(maxLen, i - start + 1)
+        seen[letter] = i
+    return maxLen
+
+# Time O(N), Space O(N)
+
+
+
+
+
