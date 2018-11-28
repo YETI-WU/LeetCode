@@ -59,3 +59,15 @@ Therefore, it is NOT a valid word square.
 """
 
 
+# Time O(m*n); Space O(1)
+def validWordSquare(words):
+    for i in len(words):
+        for j in len(wordds[i]):
+            if j>=len(words) or i>=len(words[i]) or words[i][j]!=words[j][i]:
+                return False
+    return True
+
+
+
+
+
