@@ -17,7 +17,7 @@ Output: 2
 import collections
 def majorElement(nums):
     cnts = collections.Counter(nums)
-    return max(cnts.key(), key=conts.get)
+    return max(cnts.keys(), key=conts.get)
 
 # Time O(N); Space O(1)
 def majorElement(nums):
@@ -31,5 +31,5 @@ def majorElement(nums):
         else:
             cnt += 1
     return major_num
-# Boyer–Moore majority vote algorithm. Refer to:
+# Boyer–Moore Majority Vote Algorithm
 # https://en.wikipedia.org/wiki/Boyer–Moore_majority_vote_algorithm
