@@ -13,3 +13,23 @@ Input: [2,2,1,1,1,2,2]
 Output: 2
 """
 
+# Time O(N); Space O(N)
+import collections
+def majorElement(nums):
+    cnts = collections.Counter(nums)
+    return max(cnts.key(), key=conts.get)
+
+# Time O(N); Space O(1)
+def majorElement(nums):
+    major_num = 0
+    cnt = 0
+    for num in nums:
+        if cnt == 0:
+            major_num = num
+        if major_num != num:
+            cnt -= 1
+        else:
+            cnt += 1
+    return major_num
+# Boyer–Moore majority vote algorithm. Refer to:
+# https://en.wikipedia.org/wiki/Boyer–Moore_majority_vote_algorithm
