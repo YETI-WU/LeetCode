@@ -28,3 +28,14 @@ Input: "{[]}"
 Output: true
 """
 
+
+# Time O(N); Space O(1)
+def validParentheses(s):
+    if len(s)%2: return False
+    paren_dic = { '(' : ')' , '[' : ']' , '{' : '}' }
+    stack = []
+    for c in s:
+        if c in paren_dic: stack.append(paren_dic[c])
+        elif not stack or c != stack.pop(): return False
+    return stack == []
+
