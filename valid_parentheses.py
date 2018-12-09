@@ -39,3 +39,6 @@ def validParentheses(s):
         elif not stack or c != stack.pop(): return False
     return stack == []
 
+
+
+
