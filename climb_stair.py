@@ -23,4 +23,14 @@ Explanation: There are three ways to climb to the top.
 
 # Fibonacci Way
 def climbStaris(n):
+  a = b = 1
+  for _ in range(n):
+    a , b =  b , a + b
+    
+  return a
+
+
+
+
+
 
