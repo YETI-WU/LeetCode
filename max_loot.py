@@ -29,6 +29,15 @@ def rob(num):
         last , now = now , max(last+n , now)
     return now
 
+# "last" store the last max sum
+# "now" store the current max sum
+
+"""
+Recursive Formula:
+f(0) = nums[0]
+f(1) = max(num[0], num[1])
+f(k) = max( f(k-2) + nums[k], f(k-1) )
+"""
 
 
 
