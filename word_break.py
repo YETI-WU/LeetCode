@@ -21,3 +21,16 @@ Input: s = "catsandog", wordDict = ["cats", "dog", "sand", "and", "cat"]
 Output: false
 """
 
+# Dynamic Programming
+def wordBreak(s,words):
+    d = [False] * len(s)
+    for i in range(len(s)):
+        for w in words:
+            if w == s[i-len(w)+1 : i+1] and ( d[i-len(w)] or i-len(w) == -1 ):
+                d[i] = True
+    return d[-1]  # the last index of d needs to be true to "fulfill" the word break
+
+
+
+
+
