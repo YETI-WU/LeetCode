@@ -16,3 +16,13 @@ Your function should return length = 5, with the first five elements of nums bei
 It doesn't matter what values are set beyond the returned length.
 """
 
+# Time O(N); Space O(1)
+def reomveDuplicates(A):
+    if not A: return 0
+    newIndex = 0
+    for i in range(1, len(A)):
+        if A[i] != A[newIndex]:
+            newIndex += 1
+            A[newIndex] = A[i]
+    return newIndex + 1
+
