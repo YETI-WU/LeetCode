@@ -12,3 +12,14 @@ Input: a = "1010", b = "1011"
 Output: "10101"
 """
 
+
+def addBinary(a,b):
+    return bin(eval('0b'+a) + eval('0b'+b))[2:]
+
+# '0b'  means that the number that follows is in binary
+# [2:]  to cut of the head "0b" of the binary number
+
+
+
+
+
