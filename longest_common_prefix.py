@@ -21,6 +21,10 @@ def longestCommonPrefix(strs):
             return strs[0][:i]
         else:
             return min(strs)
+"""
+list(zip(*["flower","flow","flight"]))
+Out: [('f', 'f', 'f'), ('l', 'l', 'l'), ('o', 'o', 'i'), ('w', 'w', 'g')]
+"""
         
         
 # use Python Library 
