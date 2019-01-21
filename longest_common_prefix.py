@@ -14,3 +14,16 @@ Explanation: There is no common prefix among the input strings.
 """
 
 
+def longestCommonPrefix(strs):
+    if not strs:  return ""
+    for i, group in enumerate(zip(*strs)):
+        if len(set(group)) > 1:
+            return strs[0][:i]
+        else:
+            return min(strs)
+        
+        
+# use Python Library 
+def longestCommonPrefixLib(strs):
+    
+        
