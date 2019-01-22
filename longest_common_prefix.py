@@ -28,6 +28,8 @@ Out: [('f', 'f', 'f'), ('l', 'l', 'l'), ('o', 'o', 'i'), ('w', 'w', 'g')]
         
         
 # use Python Library 
+import os 
 def longestCommonPrefixLib(strs):
+    
     
         
