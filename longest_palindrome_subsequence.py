@@ -31,3 +31,4 @@ def lps(str):
   for i in range(n):
     L[i][i] = 1
 
+##### NOT FINISHED! To be Continue #####
