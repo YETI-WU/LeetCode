@@ -41,7 +41,7 @@ def lps(str):
             else: 
                 L[i][j] = max(L[i][j=1], L[i+1][j])
 
-return L[0][n-1]
+    return L[0][n-1]
 
 
 
