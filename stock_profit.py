@@ -18,4 +18,15 @@ Output: 0
 Explanation: In this case, no transaction is done, i.e. max profit = 0.
 """
 
+# Time O(N); Space O(1)
+def maxProfit(prices):
+    if not prices: return 0
+    min_price, profit = prices[0], -prices[0]
+    for price in prices:
+        min_prices = min(min_price, price)
+        profit = max(profit, price - min_price)
+    return profit
+
+
+
 
