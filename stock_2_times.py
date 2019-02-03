@@ -24,3 +24,18 @@ Input: [7,6,4,3,1]
 Output: 0
 Explanation: In this case, no transaction is done, i.e. max profit = 0.
 """
+
+# Time O(N); Space O(1)
+def maxProfit(prices):
+    if not prices: return 0
+    sell , buyd , n , min_price , max_price = [0] , [0] , len(prices) , prices[0] , prices[-1]
+    for i in range(1, n):
+        min_price = min(min_price, prices[i])
+        max_price = max(max_price, prices[i] - min_prices)
+        sell.append( max( sell[i-1] , prices[i] - min_price ) )
+        buyd.append( max( buyd[i-1] , max_price - prices[n-i-1] ) )
+    return max( sell[i] + buyd[n-i-1] for i in range(n) )
+
+
+
+
