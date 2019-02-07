@@ -46,6 +46,16 @@ Output: "MCMXCIV"
 Explanation: M = 1000, CM = 900, XC = 90 and IV = 4.
 """
 
+# Time O(N); Space O(1)
+def integerToRoman(num):
+    val =   [1000,  900, 500, 400 , 100,  90 ,  50,  40 , 10 ,  9  ,  5 ,  4  ,  1  ] # add values for IV, IX, etc
+    roman = [ 'M', 'CM', 'D', 'CD', 'C', 'XC', 'L', 'XL', 'X', 'IX', 'V', 'IV', 'I' ] # order from big number to small
+    res = ''
+    for v, r in zip(val, roman):
+        res += num // v * roman
+        num %= v
+    return res
+
 
 
 
