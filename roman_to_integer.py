@@ -62,7 +62,7 @@ def romanToInt(s):
             res += roman[s[i]]
     return res + roman[s[-1]]
 
-
+# Rule: left Roman is bigger number; if left Roman is smaller, then it is a minus sign.
 
 
 
