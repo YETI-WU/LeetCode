@@ -14,6 +14,15 @@ Output:
 ]
 """
 
+# Recursive: Time O(N^2)
+def permuteList(nums):
+    return [ [n] + p
+            for i, n in enumerate(nums)
+            for p in permuteList(nums[:i]+nums[i+1:])
+           ] or [[]]
+
+
+
 
 
 
