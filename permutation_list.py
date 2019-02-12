@@ -22,7 +22,26 @@ def permuteList(nums):
            ] or [[]]
 
 
+# Library: Itertools
+def permuteList(nums):
+     return list(itertools.permutations(nums))
 
 
+# DFS
+def permuteList(nums):
+    res = []
+    dfs(nums, [], res)
+    return res
 
-
+def dfs(nums, path, res):
+    if not nums:
+        res.append(path)
+    else:
+        for i in range(len(nums)):
+            dfs(num[:i]+num[i+1:], path+[nums[i]], res)
+            
+            
+            
+            
+            
+            
