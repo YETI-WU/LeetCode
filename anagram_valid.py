@@ -22,3 +22,11 @@ def isAnagram(s, t):
         dic_t[char] = dic_t.get(char, 0) + 1
     return dic_s == dic_t
 
+
+
+def isAnagram(s, t):
+    return sorted(s) == sorted(t)
+
+
+
+
