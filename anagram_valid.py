@@ -28,5 +28,15 @@ def isAnagram(s, t):
     return sorted(s) == sorted(t)
 
 
+"""
+What if the inputs contain unicode characters? How would you adapt your solution to such case?
+"""
+def isAnagram(s, t):
+    lst_s, lst_t = [0] * 26, [0] * 26  # use list's index to represent 26 characters
+    for char in s:
+        lst_s[ord(char)-ord('a')] += 1  # use ord() to convert unicode character to integer, represent 26 characters
+    for char in t:
+        lst_t[ord(char)-ord('a')] += 1
+    return lst_s.sort() == lst_t.sort()  # use .sort() not sorted() to save space
 
 
