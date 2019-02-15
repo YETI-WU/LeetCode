@@ -14,6 +14,14 @@ Note:
 •	The order of your output does not matter.
 """
 
+# Time O(N); Space O(1)
+def groupAnagrams(strs):
+    d = {}
+    for word in strs:
+        d_key = tuple(sorted(word))
+        d[d_key] = d.get(d_key,[]) + [word]
+    return d.values()
+
 
 
 
