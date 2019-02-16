@@ -22,6 +22,11 @@ def groupAnagrams(strs):
         d[d_key] = d.get(d_key,[]) + [word]
     return d.values()
 
+# collections.Counter()
+def groupAnagrams(strs):
+    cnt = collections.Counter( [ tuple(sorted(s)) for s in strs ] )
+    return filter(lambda x: cnt[ tuple(sorted(x)) ]>1, strs)
+
 
 
 
