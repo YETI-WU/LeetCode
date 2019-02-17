@@ -26,7 +26,7 @@ The substring with start index = 2 is "ab", which is an anagram of "ab".
 """
 
 
-
+# Sliding Window, Time O(N)
 def findAnagrams(s,p):
     res = []
     lst_s, lst_p = [0]*26, [0]*26                   #1# Use list [0,0,…,0] to deal with unicode
