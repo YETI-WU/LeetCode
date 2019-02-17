@@ -29,17 +29,17 @@ The substring with start index = 2 is "ab", which is an anagram of "ab".
 
 def findAnagrams(s,p):
     res = []
-    lst_s, lst_p = [0]*26, [0]*26    #1# Use list [0,0,…,0] to deal with unicode
-    for i in range(len(p)):          #2# loop through p s to get the representing lst_p, [0,1,1,0,…,1]
+    lst_s, lst_p = [0]*26, [0]*26                   #1# Use list [0,0,…,0] to deal with unicode
+    for i in range(len(p)):                         #2# loop through p s to get the representing lst_p, [0,1,1,0,…,1]
         lst_s[ ord(s[i])-ord('a') ] += 1
         lst_p[ ord(p[i])-ord('a') ] += 1
-    if lst_s == st_p:    #3# the beginig characters are the same, append index 0 to result
+    if lst_s == st_p:                               #3# the beginig characters are the same, append index 0 to result
         res.append(0)
         
-    for i in range( 1, len(s)-len(p)+1 ):    #4# loop from 1 to the last len(s)-len(p)+1
-        lst_s[ ord(s[i-1])-ord('a') ] -= 1           #5# remove previous character
+    for i in range( 1, len(s)-len(p)+1 ):           #4# loop from 1 to the last len(s)-len(p)+1
+        lst_s[ ord(s[i-1])-ord('a') ] -= 1          #5# remove previous character
         lst_s[ ord(s[i+len(p)-1])-ord('a') ] += 1   #6# add the new counting character
-        if lst_s == lst_p:    #7# characters are the same, append index i to result
+        if lst_s == lst_p:                          #7# characters are the same, append index i to result
             res.append(i)
     return res
 
