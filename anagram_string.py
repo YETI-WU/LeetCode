@@ -31,4 +31,18 @@ def findAnagrams(s,p):
     res = []
     lst_s, lst_p = [0]*26, [0]*26
     for i in range(len(p)):
-        res[i].append(
+        lst_s[ ord(s[i])-ord('a') ] += 1
+        lst_p[ ord(p[i])-ord('a') ] += 1
+    if lst_s == st_p:
+        res.append(0)
+        
+    for i in range( 1, len(s)-len(p)+1 ):
+        lst_s[ ord(s[i-1])-ord('a') ] -= 1
+        lst_s[ ord(s[i+len(p)-1])-ord('a') ] += 1
+        if lst_s == lst_p:
+            res.append(i)
+    return res
+
+        
+                   
+
