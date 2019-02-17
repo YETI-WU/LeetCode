@@ -24,3 +24,11 @@ The substring with start index = 0 is "ab", which is an anagram of "ab".
 The substring with start index = 1 is "ba", which is an anagram of "ab".
 The substring with start index = 2 is "ab", which is an anagram of "ab".
 """
+
+
+
+def findAnagrams(s,p):
+    res = []
+    lst_s, lst_p = [0]*26, [0]*26
+    for i in range(len(p)):
+        res[i].append(
