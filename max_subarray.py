@@ -8,11 +8,12 @@ Output: 6
 Explanation: [4,-1,2,1] has the largest sum = 6.
 """
 
-def maxSubArray(A):
-    currsum = maxsum = A[0]
-    for num in A[1:]:
-        currsum = max(num+currsum , num)
-        maxsum = max(currsum, maxsum)
+# Time O(N), Space O(2)
+def maxSubArray(A):                         #0# edge case
+    currsum = maxsum = A[0]                 #1# set initial: current_sum & max_sum
+    for num in A[1:]:                       #2# loop through A
+        currsum = max(num+currsum , num)    #3# compare current num with current_sum+num
+        maxsum = max(currsum, maxsum)       #4# update max_sum 
     return maxsum
 
-# Time O(N), Space O(2)
+
