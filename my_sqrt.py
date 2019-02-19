@@ -17,6 +17,18 @@ Explanation: The square root of 8 is 2.82842..., and since
              the decimal part is truncated, 2 is returned.
 """
 
+# Newton's Method
+def mySqrt(x):
+    r = x
+    while r * r > x:
+        r = ( r + x//r ) //2
+    return r
 
 
-
+# Binary Search
+def mySqrt(x):
+    l , r = 0 , x
+    while l <= r:
+        mid = (l+r) //2
+        if mid * mid <= x < (mid+1) * (mid+1)
+        
