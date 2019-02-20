@@ -31,12 +31,14 @@ Output: true
 
 # Time O(N); Space O(1)
 def validParentheses(s):
-    if len(s)%2: return False
-    paren_dic = { '(' : ')' , '[' : ']' , '{' : '}' }
-    stack = []
+    if len(s)%2: return False                           #0# Non-Even, directly exclude
+    paren_dic = { '(' : ')' , '[' : ']' , '{' : '}' }   #1# dictionary : open : close
+    stack = []                                          #2# stack : last in should first out
     for c in s:
-        if c in paren_dic: stack.append(paren_dic[c])
-        elif not stack or c != stack.pop(): return False
+        if c in paren_dic: 
+            stack.append(paren_dic[c])                  #3# put needed Close_parenthesis to stack
+        elif not stack or c != stack.pop():             #4# have closed_paren, but NO open_paren in stack. or the close_paren NOT match
+            return False
     return stack == []
 
 
