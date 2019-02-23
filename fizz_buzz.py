@@ -26,7 +26,7 @@ Return:
 ]
 """
 
-def fuzzBuzz(n):
+def fizz_buzz(n):
     res = []
     for i in range(1,n+1):
         if i%3 == 0 and i%5 == 0:
@@ -36,9 +36,13 @@ def fuzzBuzz(n):
         elif i%5 == 0:
             res.append('Buzz')
         else:
-            res.append(i)
+            res.append(str(i))
     return res
 
+
+# Python List Comprehension
+def fizz_buzz(n):
+    return [ 'Fizz'*(i%3==0) + 'Buzz'*(i%5==0) or str(i) for i in range(1,n+1) ]
 
 
 
