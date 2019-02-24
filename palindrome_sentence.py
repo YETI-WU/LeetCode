@@ -15,7 +15,12 @@ Output: false
 
 
 def isPalindrome(s):
-    s = ''.join([char for char in s if char.isalnum()]).lower()
+    s = [char.lower() for char in s if char.isalnum()]
+    return s == s[::-1]
+
+# Python filter
+def isPalindrome(s):
+    s = list( filter(lambda x: x.isalnum(), s.lower()) )
     return s == s[::-1]
 
 
