@@ -11,6 +11,14 @@ Output: "9534330"
 Note: The result may be very large, so you need to return a string instead of an integer.
 """
 
+# Time O(NlogN), Space(N)
+class LargeStrConcat
+def __lt__(x,y):
+    return x+y > y+x
+
+def largestNumber(nums):
+    return ''.join( sorted( map(str,nums), key = LargeStrConcat ) ).lstrip('0') or '0'
+
 
 
 
