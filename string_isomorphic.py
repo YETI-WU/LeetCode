@@ -26,3 +26,9 @@ You may assume both s and t have the same length.
 def stringIsomer(s,t):
     return list( map(s.find, s) ) == list( map(t.find, t) )
 
+def stringIsomer(s,t):
+    return [s.find(char) for char in s] == [t.find(char) for char in t]
+
+
+
+
