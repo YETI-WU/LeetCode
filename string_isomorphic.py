@@ -29,6 +29,17 @@ def stringIsomer(s,t):
 def stringIsomer(s,t):
     return [s.find(char) for char in s] == [t.find(char) for char in t]
 
-
+def stringIsomer(s,t):
+    if len(set(s)) != len(set(t)):
+        return False
+    dict = {}
+    for i, char in enumerate(s):
+        if char not in dict:
+            dict[char] = t[i]
+        elif dict[char] != t[i]:
+            return Flase
+    return True
+            
+    
 
 
