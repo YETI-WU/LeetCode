@@ -17,18 +17,26 @@ minStack.top();      --> Returns 0.
 minStack.getMin();   --> Returns -2.
 """
 
-# Use Tuple
+# Use Tuple(val, curr_min). Time O(1)
 class MinStack:
     
     def __init__(self):
         self.stack = []
     
     def push(self, x):
-        curr_min = min(x, curr_min)
+        curr_min = min(x, self.getMin() if self.stack else float('inf'))
+        self.stack.append((x, curr_min))
         
     def pop(self):
+        self.stack.pop()
     
     def top(self):
+        return self.stack[-1][0] if self.stack  else None
     
     def getMin(self):
+        return self.stack[-1][1] if self.stack  else None
 
+
+            
+            
+            
