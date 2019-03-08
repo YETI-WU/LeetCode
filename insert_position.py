@@ -22,6 +22,17 @@ Input: [1,3,5,6], 0
 Output: 0
 """
 
+# Python List Comprehension
+def searchInsert(nums, target):
+    return len([v for v in nums if v < target])
 
+# Binary Search
+def serachInsert(nums, target):
+    l, r = 0, len(nums)
+    while l < r:
+        m = (l+r) //2
+        if nums[m] < target:
+            l = m+1
+        else
 
 
