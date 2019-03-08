@@ -28,11 +28,15 @@ def searchInsert(nums, target):
 
 # Binary Search
 def serachInsert(nums, target):
-    l, r = 0, len(nums)
+    l, r = 0, len(nums)-1
     while l < r:
         m = (l+r) //2
         if nums[m] < target:
             l = m+1
-        else
+        else:
+            r = m
+    return l
+
+
 
 
