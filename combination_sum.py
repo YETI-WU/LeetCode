@@ -25,6 +25,22 @@ A solution set is:
 ]
 """
 
-
+def combinationSum(candidates, target):
+    res = []
+    candidates.sort()
+    dfs(target, [])
+    
+    def dfs(need, stack):
+        if need == 0:
+            res.append(stack)
+            return
+        if need < 0:
+            return
+        for num in candidates:
+            dfs(need-num, stack.append(num))
+    
+    
+    return res
+    
 
 
