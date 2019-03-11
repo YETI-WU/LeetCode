@@ -37,10 +37,9 @@ def combinationSum(candidates, target):
         if need < 0:
             return
         for num in candidates:
-            dfs(need-num, stack.append(num))
-    
+            dfs(need-num, stack+[num])
     
     return res
     
-
+# not working, need to contine
 
