@@ -28,18 +28,18 @@ A solution set is:
 def combinationSum(candidates, target):
     res = []
     candidates.sort()
-    dfs(target, [])
+    dfs(target, 0, [])
     
-    def dfs(need, stack):
+    def dfs(need, ind, stack):
         if need == 0:
             res.append(stack)
             return
         if need < 0:
             return
-        for num in candidates:
-            dfs(need-num, stack+[num])
+        for i in range(ind, len(candidates):
+            dfs(need-candidates[i], i, stack+[candidates[i]])
     
     return res
     
-# not working, need to contine
+
 
