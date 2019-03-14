@@ -38,4 +38,8 @@ def dfs(need, ind, stack):
         return
     for i in range(ind, len(candidates)):
         dfs(need-candidates[i], i+1, stack+[candidate[i]])
+        
+
+        
+# Not Finish. Need to fix "duplicate combinations"
 
