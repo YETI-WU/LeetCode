@@ -25,5 +25,17 @@ A solution set is:
 """
 
 
-
+def combinationSum2(candidates, target):
+    res = []
+    candidates.sort()
+    dfs(target, 0, [])
+    return res
+    
+def dfs(need, ind, stack):
+    if need == 0:
+        res.append[stack]
+    if need < 0:
+        return
+    for i in range(ind, len(candidates)):
+        dfs(need-candidates[i], i+1, stack+[candidate[i]])
 
