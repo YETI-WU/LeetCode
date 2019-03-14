@@ -33,7 +33,7 @@ def combinationSum2(candidates, target):
     
 def dfs(need, ind, stack):
     if need == 0:
-        res.append[stack]
+        res.append(stack)
     if need < 0:
         return
     for i in range(ind, len(candidates)):
