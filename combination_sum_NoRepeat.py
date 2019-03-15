@@ -37,9 +37,10 @@ def dfs(need, ind, stack):
     if need < 0:
         return
     for i in range(ind, len(candidates)):
+        if i > ind and candidates[i]==candidates[i-1]: continue
         dfs(need-candidates[i], i+1, stack+[candidate[i]])
         
 
         
-# Not Finish. Need to fix "duplicate combinations"
+
 
