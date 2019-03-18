@@ -16,8 +16,11 @@ Output:
 def permutationUnique(nums):
     ans =[[]]
     for num in nums:
-        ans = [ l[:i]+[n]+l[i:] for l in ans for i in ...
+        ans = [ l[:i]+[num]+l[i:] 
+               for l in ans 
+               for i in range( (l+[num]).index(num) + 1 ) ]
+    return ans
 
                
-# NOT finished.....
+
 
