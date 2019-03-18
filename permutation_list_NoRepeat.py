@@ -13,5 +13,11 @@ Output:
 """
 
 
+def permutationUnique(nums):
+    ans =[[]]
+    for num in nums:
+        ans = [ l[:i]+[n]+l[i:] for l in ans for i in ...
 
+               
+# NOT finished.....
 
