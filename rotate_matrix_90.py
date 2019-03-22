@@ -38,6 +38,12 @@ rotate the input matrix in-place such that it becomes:
 ]
 """
 
+# Trick: 
+# 1. reverse every element in the list in Matrix [::-1] ; 
+# 2. zip(*A) unzip-zip the list in Matrix.
+def rotat(A):
+    return A[:] = zip(*A[::-1])
+
 
 
 
